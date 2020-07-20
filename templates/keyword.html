@@ -1,0 +1,59 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="row">
+  <div class="col-lg-6 mb-4">
+    <div class="card bg-success text-white shadow">
+      <div class="card-body">
+        빠른 유사도 검사
+        <div class="text-white-50 small">Term Frequency - Inverse Document Frequency</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 mb-4">
+    <div class="card bg-info text-white shadow">
+      <div class="card-body">
+        정밀 유사도 검사
+        <div class="text-white-50 small">Word to Vector</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">{{keyword}}</h6>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th>언론사</th>
+              <th>헤드라인</th>
+              <th>요약</th>
+              <th>추가</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>언론사</th>
+              <th>헤드라인</th>
+              <th>요약</th>
+              <th>추가</th>
+            </tr>
+          </tfoot>
+          <tbody>
+            {% for item in articles %}
+            <tr>
+              <td>{{item.company}}</td>
+              <td>{{item.headline}}</td>
+              <td>요약</td>
+              <td>추가</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+</div>
+{% endblock %}
