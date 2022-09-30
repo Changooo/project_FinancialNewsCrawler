@@ -19,7 +19,7 @@ idna==2.10
 itsdangerous==1.1.0
 Jinja2==2.11.2
 jmespath==0.10.0
-joblib==0.16.0
+joblib==1.2.0
 JPype1==1.0.1
 konlpy==0.5.2
 lxml==4.5.2
